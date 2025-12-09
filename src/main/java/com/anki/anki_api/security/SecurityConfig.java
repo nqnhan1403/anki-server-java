@@ -58,7 +58,7 @@ public class SecurityConfig {
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> 
                 auth.requestMatchers("/api/auth/**").permitAll()
-                    .requestMatchers("/api/cards/**").hasRole("TEACHER") // Only teachers can manage cards? Or everyone read?
+                    .requestMatchers("/api/cards/**").authenticated()
                     // User said: "Anki Card will content word...". "User has 2 kind of user, Teacher and Student".
                     // I'll assume only Teachers can CREATE/UPDATE cards. Students might verify them. 
                     // But usually Anki is personal. A "server about manage anki card" might mean a central repo?

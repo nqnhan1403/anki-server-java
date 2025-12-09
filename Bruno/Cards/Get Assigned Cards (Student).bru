@@ -1,0 +1,15 @@
+meta {
+  name: Get Assigned Cards (Student)
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/api/cards/assigned
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

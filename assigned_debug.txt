@@ -1,0 +1,24 @@
+Note: Unnecessary use of -X or --request, GET is already inferred.
+* Uses proxy env variable NO_PROXY == '*.azureedge.net'
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1:8080...
+* Connected to localhost (127.0.0.1) port 8080 (#0)
+> GET /api/cards/assigned HTTP/1.1
+> Host: localhost:8080
+> User-Agent: curl/8.1.2
+> Accept: */*
+> Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdHVkZW50XzE3NjUyNTYyOTYiLCJpYXQiOjE3NjUyNTYyOTYsImV4cCI6MTc2NTM0MjY5Nn0.hs84GceYyF6gIAguOhcDQlgdqAVWjxRoQZbjhrKQLZA
+> 
+< HTTP/1.1 401 
+< X-Content-Type-Options: nosniff
+< X-XSS-Protection: 0
+< Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+< Pragma: no-cache
+< Expires: 0
+< X-Frame-Options: DENY
+< Content-Length: 0
+< Date: Tue, 09 Dec 2025 04:58:16 GMT
+< 
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+* Connection #0 to host localhost left intact

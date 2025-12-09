@@ -7,11 +7,15 @@ meta {
 post {
   url: {{base_url}}/api/cards
   body: json
-  auth: inherit
+  auth: bearer
 }
 
 headers {
-  Authorization: Bearer {{teacher_token}}
+  Authorization: Bearer {{token}}
+}
+
+auth:bearer {
+  token: {{token}}
 }
 
 body:json {
@@ -25,4 +29,5 @@ body:json {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

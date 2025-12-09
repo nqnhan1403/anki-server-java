@@ -29,11 +29,19 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
         try {
+            logger.info("=== AuthTokenFilter: Processing request to: {}", request.getRequestURI());
             String jwt = parseJwt(request);
+            logger.info("=== AuthTokenFilter: JWT parsed: {}", jwt != null ? "Present (length: " + jwt.length() + ")" : "NULL");
+            
             if (jwt != null && jwtUtils.validateJwtToken(jwt)) {
+                logger.info("=== AuthTokenFilter: JWT is valid");
                 String username = jwtUtils.getUserNameFromJwtToken(jwt);
+                logger.info("=== AuthTokenFilter: Username from JWT: {}", username);
 
                 UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+                logger.info("=== AuthTokenFilter: UserDetails loaded: {}, Authorities: {}", 
+                    userDetails.getUsername(), userDetails.getAuthorities());
+                
                 UsernamePasswordAuthenticationToken authentication =
                         new UsernamePasswordAuthenticationToken(
                                 userDetails,
@@ -42,9 +50,12 @@ public class AuthTokenFilter extends OncePerRequestFilter {
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 
                 SecurityContextHolder.getContext().setAuthentication(authentication);
+                logger.info("=== AuthTokenFilter: Authentication set in SecurityContext");
+            } else {
+                logger.warn("=== AuthTokenFilter: JWT is null or invalid");
             }
         } catch (Exception e) {
-            logger.error("Cannot set user authentication: {}", e);
+            logger.error("=== AuthTokenFilter: Cannot set user authentication: {}", e.getMessage(), e);
         }
 
         filterChain.doFilter(request, response);

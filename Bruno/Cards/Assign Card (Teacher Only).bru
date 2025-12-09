@@ -1,0 +1,22 @@
+meta {
+  name: Assign Card (Teacher Only)
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/api/cards/assign
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{teacher_token}}
+}
+
+body:json {
+  {
+    "cardId": 1,
+    "studentId": 2
+  }
+}

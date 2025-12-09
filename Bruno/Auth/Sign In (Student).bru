@@ -12,16 +12,17 @@ post {
 
 body:json {
   {
-      "username": "student1_t1",
+      "username": "student_1765252880",
       "password": "123456"
   }
 }
 
 script:post-response {
   var jsonData = res.getBody();
-  bru.setVar("student_token", jsonData.token);
+  bru.setVar("token", jsonData.token);
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

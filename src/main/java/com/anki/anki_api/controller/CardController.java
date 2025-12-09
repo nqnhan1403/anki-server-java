@@ -17,6 +17,9 @@ public class CardController {
     @Autowired
     CardService cardService;
 
+    @Autowired
+    com.anki.anki_api.repository.UserRepository userRepository;
+
     @GetMapping
     public List<AnkiCard> getAllCards() {
         return cardService.getAllCards();
@@ -27,5 +30,22 @@ public class CardController {
     public ResponseEntity<?> createCard(@Valid @RequestBody AnkiCard card) {
         AnkiCard createdCard = cardService.createCard(card);
         return ResponseEntity.ok(createdCard);
+    }
+
+    @PostMapping("/assign")
+    @PreAuthorize("hasRole('TEACHER')")
+    public ResponseEntity<?> assignCard(@Valid @RequestBody com.anki.anki_api.dto.AssignmentRequest request) {
+        cardService.assignCardToStudent(request.getCardId(), request.getStudentId());
+        return ResponseEntity.ok("Card assigned successfully!");
+    }
+
+    @GetMapping("/assigned")
+    @PreAuthorize("hasRole('STUDENT') or hasRole('TEACHER')")
+    public List<AnkiCard> getAssignedCards(org.springframework.security.core.Authentication authentication) {
+        String username = authentication.getName();
+        com.anki.anki_api.entity.User user = userRepository.findByUsername(username)
+        .orElseThrow(() -> new RuntimeException("User not found"));
+        System.out.println("USERRR: " + user);
+        return cardService.getAssignedCards(user.getId());
     }
 }

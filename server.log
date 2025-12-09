@@ -1,0 +1,942 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.anki:anki-api >--------------------------
+[INFO] Building anki-api 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.0:run (default-cli) > test-compile @ anki-api >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ anki-api ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ anki-api ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ anki-api ---
+[INFO] skip non existing resourceDirectory /Users/nhannguyen/Documents/Projects/Java/anki-server-java/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ anki-api ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[INFO] 
+[INFO] <<< spring-boot:3.4.0:run (default-cli) < test-compile @ anki-api <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.0:run (default-cli) @ anki-api ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-12-09T12:22:11.801+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : Starting AnkiApiApplication using Java 21.0.5 with PID 86088 (/Users/nhannguyen/Documents/Projects/Java/anki-server-java/target/classes started by nhannguyen in /Users/nhannguyen/Documents/Projects/Java/anki-server-java)
+2025-12-09T12:22:11.802+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-12-09T12:22:11.826+07:00  INFO 86088 --- [anki-api] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-12-09T12:22:11.826+07:00  INFO 86088 --- [anki-api] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-12-09T12:22:12.175+07:00  INFO 86088 --- [anki-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-09T12:22:12.209+07:00  INFO 86088 --- [anki-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 4 JPA repository interfaces.
+2025-12-09T12:22:12.557+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-09T12:22:12.565+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-09T12:22:12.565+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-09T12:22:12.586+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-09T12:22:12.587+07:00  INFO 86088 --- [anki-api] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 760 ms
+2025-12-09T12:22:12.653+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-09T12:22:12.682+07:00  INFO 86088 --- [anki-api] [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-12-09T12:22:12.703+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-09T12:22:12.831+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-09T12:22:12.847+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-09T12:22:12.944+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2fb64dd8
+2025-12-09T12:22:12.945+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-09T12:22:12.966+07:00  WARN 86088 --- [anki-api] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-09T12:22:12.975+07:00  INFO 86088 --- [anki-api] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-09T12:22:13.408+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-09T12:22:13.481+07:00  INFO 86088 --- [anki-api] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-09T12:22:13.699+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-09T12:22:13.974+07:00  INFO 86088 --- [anki-api] [  restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-12-09T12:22:13.975+07:00  WARN 86088 --- [anki-api] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-09T12:22:14.016+07:00  WARN 86088 --- [anki-api] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-09T12:22:14.369+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-09T12:22:14.385+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-12-09T12:22:14.389+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : Started AnkiApiApplication in 2.751 seconds (process running for 2.935)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+2025-12-09T12:22:35.139+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-09T12:22:35.139+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-09T12:22:35.140+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-09T12:22:35.175+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Processing request to: /api/auth/signin
+2025-12-09T12:22:35.175+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT parsed: NULL
+2025-12-09T12:22:35.175+07:00  WARN 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT is null or invalid
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-12-09T12:22:40.353+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-3] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Processing request to: /api/cards/assigned
+2025-12-09T12:22:40.354+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-3] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT parsed: Present (length: 148)
+2025-12-09T12:22:40.354+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-3] com.anki.anki_api.security.JwtUtils      : === JwtUtils: Validating JWT token
+2025-12-09T12:22:40.379+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-3] com.anki.anki_api.security.JwtUtils      : === JwtUtils: JWT token is valid
+2025-12-09T12:22:40.379+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-3] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT is valid
+2025-12-09T12:22:40.380+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-3] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Username from JWT: student_1765252880
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-12-09T12:22:40.384+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-3] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: UserDetails loaded: student_1765252880, Authorities: [ROLE_STUDENT]
+2025-12-09T12:22:40.384+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-3] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Authentication set in SecurityContext
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+USERRR: User(id=15, username=student_1765252880, password=$2a$10$BBWw2.kQFVIn1HENiUBYU.rUAVcrRnUlTJbhPtmPdSGNEHn1ZII/2, email=student_1765252880@test.com, fullName=Student Test, role=ROLE_STUDENT)
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.assigned_at,
+        ca1_0.card_id,
+        ca1_0.student_id 
+    from
+        card_assignments ca1_0 
+    where
+        ca1_0.student_id=?
+Hibernate: 
+    select
+        ac1_0.id,
+        ac1_0.definition,
+        ac1_0.difficulty,
+        ac1_0.pronunciation,
+        ac1_0.word 
+    from
+        anki_cards ac1_0 
+    where
+        ac1_0.id=?
+2025-12-09T12:22:40.473+07:00 ERROR 86088 --- [anki-api] [nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor]] with root cause
+
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->com.anki.anki_api.entity.AnkiCard$HibernateProxy$5aX3hYiY["hibernateLazyInitializer"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1328) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:414) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:53) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:30) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:770) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:184) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serializeContents(CollectionSerializer.java:145) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:107) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:25) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:502) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:422) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1579) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1061) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:486) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:126) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:345) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:208) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at com.anki.anki_api.security.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:61) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.1.jar:6.4.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-12-09T12:22:40.479+07:00 ERROR 86088 --- [anki-api] [nio-8080-exec-3] c.a.anki_api.security.AuthEntryPointJwt  : Unauthorized error: Full authentication is required to access this resource
+2025-12-09T12:23:58.721+07:00  INFO 86088 --- [anki-api] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-12-09T12:23:58.727+07:00  INFO 86088 --- [anki-api] [       Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-09T12:23:58.732+07:00  INFO 86088 --- [anki-api] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-09T12:23:58.738+07:00  INFO 86088 --- [anki-api] [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-09T12:23:58.751+07:00  INFO 86088 --- [anki-api] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-09T12:23:58.757+07:00  INFO 86088 --- [anki-api] [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-12-09T12:23:58.846+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : Starting AnkiApiApplication using Java 21.0.5 with PID 86088 (/Users/nhannguyen/Documents/Projects/Java/anki-server-java/target/classes started by nhannguyen in /Users/nhannguyen/Documents/Projects/Java/anki-server-java)
+2025-12-09T12:23:58.846+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-12-09T12:23:58.941+07:00  INFO 86088 --- [anki-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-09T12:23:58.948+07:00  INFO 86088 --- [anki-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 4 JPA repository interfaces.
+2025-12-09T12:23:59.027+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-09T12:23:59.028+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-09T12:23:59.028+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-09T12:23:59.034+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-09T12:23:59.035+07:00  INFO 86088 --- [anki-api] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2025-12-09T12:23:59.074+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-09T12:23:59.075+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-09T12:23:59.080+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-09T12:23:59.081+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-12-09T12:23:59.112+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@14f87f7e
+2025-12-09T12:23:59.112+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-12-09T12:23:59.117+07:00  WARN 86088 --- [anki-api] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-09T12:23:59.120+07:00  INFO 86088 --- [anki-api] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-09T12:23:59.169+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-09T12:23:59.227+07:00  INFO 86088 --- [anki-api] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-09T12:23:59.338+07:00  INFO 86088 --- [anki-api] [  restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-12-09T12:23:59.339+07:00  WARN 86088 --- [anki-api] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-09T12:23:59.375+07:00  WARN 86088 --- [anki-api] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-09T12:23:59.612+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-09T12:23:59.618+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-12-09T12:23:59.621+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : Started AnkiApiApplication in 0.787 seconds (process running for 108.166)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+2025-12-09T12:23:59.626+07:00  INFO 86088 --- [anki-api] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-09T12:24:23.507+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-09T12:24:23.507+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-09T12:24:23.508+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-09T12:24:23.509+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Processing request to: /api/cards/assigned
+2025-12-09T12:24:23.510+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT parsed: Present (length: 148)
+2025-12-09T12:24:23.510+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] com.anki.anki_api.security.JwtUtils      : === JwtUtils: Validating JWT token
+2025-12-09T12:24:23.511+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] com.anki.anki_api.security.JwtUtils      : === JwtUtils: JWT token is valid
+2025-12-09T12:24:23.511+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT is valid
+2025-12-09T12:24:23.511+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Username from JWT: student_1765252880
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-12-09T12:24:23.522+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: UserDetails loaded: student_1765252880, Authorities: [ROLE_STUDENT]
+2025-12-09T12:24:23.522+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Authentication set in SecurityContext
+=== CardController: getAssignedCards called
+=== CardController: Authentication: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=student_1765252880, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_STUDENT]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_STUDENT]]
+=== CardController: Principal: org.springframework.security.core.userdetails.User [Username=student_1765252880, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_STUDENT]]
+=== CardController: Authorities: [ROLE_STUDENT]
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+USERRR: User(id=15, username=student_1765252880, password=$2a$10$BBWw2.kQFVIn1HENiUBYU.rUAVcrRnUlTJbhPtmPdSGNEHn1ZII/2, email=student_1765252880@test.com, fullName=Student Test, role=ROLE_STUDENT)
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.assigned_at,
+        ca1_0.card_id,
+        ca1_0.student_id 
+    from
+        card_assignments ca1_0 
+    where
+        ca1_0.student_id=?
+Hibernate: 
+    select
+        ac1_0.id,
+        ac1_0.definition,
+        ac1_0.difficulty,
+        ac1_0.pronunciation,
+        ac1_0.word 
+    from
+        anki_cards ac1_0 
+    where
+        ac1_0.id=?
+2025-12-09T12:24:23.539+07:00 ERROR 86088 --- [anki-api] [nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor]] with root cause
+
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.ArrayList[0]->com.anki.anki_api.entity.AnkiCard$HibernateProxy$YuSIeEQj["hibernateLazyInitializer"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1328) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:414) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:53) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:30) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:770) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:184) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serializeContents(CollectionSerializer.java:145) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:107) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.std.CollectionSerializer.serialize(CollectionSerializer.java:25) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:502) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:422) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1579) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1061) ~[jackson-databind-2.18.1.jar:2.18.1]
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:486) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:126) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:345) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:208) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at com.anki.anki_api.security.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:61) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.1.jar:6.4.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.1.jar:6.4.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-12-09T12:24:23.541+07:00 ERROR 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthEntryPointJwt  : Unauthorized error: Full authentication is required to access this resource
+2025-12-09T12:25:15.078+07:00  INFO 86088 --- [anki-api] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 11 class path changes (0 additions, 0 deletions, 11 modifications)
+2025-12-09T12:25:15.081+07:00  INFO 86088 --- [anki-api] [       Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-09T12:25:15.084+07:00  INFO 86088 --- [anki-api] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-09T12:25:15.087+07:00  INFO 86088 --- [anki-api] [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-09T12:25:15.089+07:00  INFO 86088 --- [anki-api] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-12-09T12:25:15.090+07:00  INFO 86088 --- [anki-api] [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-12-09T12:25:15.209+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : Starting AnkiApiApplication using Java 21.0.5 with PID 86088 (/Users/nhannguyen/Documents/Projects/Java/anki-server-java/target/classes started by nhannguyen in /Users/nhannguyen/Documents/Projects/Java/anki-server-java)
+2025-12-09T12:25:15.209+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-12-09T12:25:15.285+07:00  INFO 86088 --- [anki-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-09T12:25:15.290+07:00  INFO 86088 --- [anki-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 4 JPA repository interfaces.
+2025-12-09T12:25:15.362+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-09T12:25:15.363+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-09T12:25:15.363+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-09T12:25:15.369+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-09T12:25:15.369+07:00  INFO 86088 --- [anki-api] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 159 ms
+2025-12-09T12:25:15.394+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-09T12:25:15.395+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-09T12:25:15.399+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-09T12:25:15.400+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-12-09T12:25:15.452+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@28fdcc71
+2025-12-09T12:25:15.452+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-12-09T12:25:15.456+07:00  WARN 86088 --- [anki-api] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-09T12:25:15.457+07:00  INFO 86088 --- [anki-api] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-09T12:25:15.502+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-09T12:25:15.546+07:00  INFO 86088 --- [anki-api] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-09T12:25:15.645+07:00  INFO 86088 --- [anki-api] [  restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-12-09T12:25:15.645+07:00  WARN 86088 --- [anki-api] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-09T12:25:15.675+07:00  WARN 86088 --- [anki-api] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-09T12:25:15.884+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-09T12:25:15.890+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-12-09T12:25:15.892+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : Started AnkiApiApplication in 0.692 seconds (process running for 184.437)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+2025-12-09T12:25:15.898+07:00  INFO 86088 --- [anki-api] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-09T12:25:39.004+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-09T12:25:39.004+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-09T12:25:39.006+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-09T12:25:39.007+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Processing request to: /api/cards/assigned
+2025-12-09T12:25:39.008+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT parsed: Present (length: 148)
+2025-12-09T12:25:39.008+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] com.anki.anki_api.security.JwtUtils      : === JwtUtils: Validating JWT token
+2025-12-09T12:25:39.009+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] com.anki.anki_api.security.JwtUtils      : === JwtUtils: JWT token is valid
+2025-12-09T12:25:39.009+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT is valid
+2025-12-09T12:25:39.010+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Username from JWT: student_1765252880
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-12-09T12:25:39.033+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: UserDetails loaded: student_1765252880, Authorities: [ROLE_STUDENT]
+2025-12-09T12:25:39.034+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Authentication set in SecurityContext
+=== CardController: getAssignedCards called
+=== CardController: Authentication: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=student_1765252880, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_STUDENT]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_STUDENT]]
+=== CardController: Principal: org.springframework.security.core.userdetails.User [Username=student_1765252880, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_STUDENT]]
+=== CardController: Authorities: [ROLE_STUDENT]
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+USERRR: User(id=15, username=student_1765252880, password=$2a$10$BBWw2.kQFVIn1HENiUBYU.rUAVcrRnUlTJbhPtmPdSGNEHn1ZII/2, email=student_1765252880@test.com, fullName=Student Test, role=ROLE_STUDENT)
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.assigned_at,
+        ca1_0.card_id,
+        ca1_0.student_id 
+    from
+        card_assignments ca1_0 
+    where
+        ca1_0.student_id=?
+Hibernate: 
+    select
+        ac1_0.id,
+        ac1_0.definition,
+        ac1_0.difficulty,
+        ac1_0.pronunciation,
+        ac1_0.word 
+    from
+        anki_cards ac1_0 
+    where
+        ac1_0.id=?
+2025-12-09T12:25:44.502+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-3] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Processing request to: /api/auth/signin
+2025-12-09T12:25:44.502+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-3] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT parsed: NULL
+2025-12-09T12:25:44.502+07:00  WARN 86088 --- [anki-api] [nio-8080-exec-3] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT is null or invalid
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-12-09T12:25:49.040+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-5] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Processing request to: /api/auth/signin
+2025-12-09T12:25:49.040+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-5] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT parsed: NULL
+2025-12-09T12:25:49.040+07:00  WARN 86088 --- [anki-api] [nio-8080-exec-5] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT is null or invalid
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-12-09T12:25:49.194+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-7] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Processing request to: /api/cards/assigned
+2025-12-09T12:25:49.194+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-7] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT parsed: Present (length: 148)
+2025-12-09T12:25:49.194+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-7] com.anki.anki_api.security.JwtUtils      : === JwtUtils: Validating JWT token
+2025-12-09T12:25:49.194+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-7] com.anki.anki_api.security.JwtUtils      : === JwtUtils: JWT token is valid
+2025-12-09T12:25:49.194+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-7] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT is valid
+2025-12-09T12:25:49.195+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-7] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Username from JWT: student_1765252880
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-12-09T12:25:49.197+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-7] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: UserDetails loaded: student_1765252880, Authorities: [ROLE_STUDENT]
+2025-12-09T12:25:49.197+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-7] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Authentication set in SecurityContext
+=== CardController: getAssignedCards called
+=== CardController: Authentication: UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=student_1765252880, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_STUDENT]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_STUDENT]]
+=== CardController: Principal: org.springframework.security.core.userdetails.User [Username=student_1765252880, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_STUDENT]]
+=== CardController: Authorities: [ROLE_STUDENT]
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+USERRR: User(id=15, username=student_1765252880, password=$2a$10$BBWw2.kQFVIn1HENiUBYU.rUAVcrRnUlTJbhPtmPdSGNEHn1ZII/2, email=student_1765252880@test.com, fullName=Student Test, role=ROLE_STUDENT)
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.assigned_at,
+        ca1_0.card_id,
+        ca1_0.student_id 
+    from
+        card_assignments ca1_0 
+    where
+        ca1_0.student_id=?
+Hibernate: 
+    select
+        ac1_0.id,
+        ac1_0.definition,
+        ac1_0.difficulty,
+        ac1_0.pronunciation,
+        ac1_0.word 
+    from
+        anki_cards ac1_0 
+    where
+        ac1_0.id=?
+2025-12-09T12:28:44.186+07:00  INFO 86088 --- [anki-api] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-12-09T12:28:44.206+07:00  INFO 86088 --- [anki-api] [      Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-09T12:28:44.208+07:00  INFO 86088 --- [anki-api] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-09T12:28:44.211+07:00  INFO 86088 --- [anki-api] [      Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-09T12:28:44.212+07:00  INFO 86088 --- [anki-api] [      Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-12-09T12:28:44.214+07:00  INFO 86088 --- [anki-api] [      Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-12-09T12:28:44.296+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : Starting AnkiApiApplication using Java 21.0.5 with PID 86088 (/Users/nhannguyen/Documents/Projects/Java/anki-server-java/target/classes started by nhannguyen in /Users/nhannguyen/Documents/Projects/Java/anki-server-java)
+2025-12-09T12:28:44.296+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-12-09T12:28:44.392+07:00  INFO 86088 --- [anki-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-09T12:28:44.400+07:00  INFO 86088 --- [anki-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 4 JPA repository interfaces.
+2025-12-09T12:28:44.538+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-09T12:28:44.539+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-09T12:28:44.539+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-09T12:28:44.547+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-09T12:28:44.547+07:00  INFO 86088 --- [anki-api] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 250 ms
+2025-12-09T12:28:44.573+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-09T12:28:44.574+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-09T12:28:44.578+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-09T12:28:44.578+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-12-09T12:28:44.605+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@433060b1
+2025-12-09T12:28:44.605+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-12-09T12:28:44.613+07:00  WARN 86088 --- [anki-api] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-09T12:28:44.615+07:00  INFO 86088 --- [anki-api] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-09T12:28:44.655+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-09T12:28:44.709+07:00  INFO 86088 --- [anki-api] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-09T12:28:44.812+07:00  INFO 86088 --- [anki-api] [  restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-12-09T12:28:44.812+07:00  WARN 86088 --- [anki-api] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-09T12:28:44.844+07:00  WARN 86088 --- [anki-api] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-09T12:28:45.037+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-09T12:28:45.054+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-12-09T12:28:45.057+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : Started AnkiApiApplication in 0.772 seconds (process running for 393.601)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+2025-12-09T12:28:45.061+07:00  INFO 86088 --- [anki-api] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-09T12:28:49.481+07:00  INFO 86088 --- [anki-api] [   File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-12-09T12:28:49.482+07:00  INFO 86088 --- [anki-api] [      Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-09T12:28:49.484+07:00  INFO 86088 --- [anki-api] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-09T12:28:49.485+07:00  INFO 86088 --- [anki-api] [      Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-09T12:28:49.485+07:00  INFO 86088 --- [anki-api] [      Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-12-09T12:28:49.486+07:00  INFO 86088 --- [anki-api] [      Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2025-12-09T12:28:49.525+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : Starting AnkiApiApplication using Java 21.0.5 with PID 86088 (/Users/nhannguyen/Documents/Projects/Java/anki-server-java/target/classes started by nhannguyen in /Users/nhannguyen/Documents/Projects/Java/anki-server-java)
+2025-12-09T12:28:49.525+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-12-09T12:28:49.625+07:00  INFO 86088 --- [anki-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-09T12:28:49.632+07:00  INFO 86088 --- [anki-api] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 4 JPA repository interfaces.
+2025-12-09T12:28:49.708+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-09T12:28:49.708+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-09T12:28:49.709+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-09T12:28:49.713+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-09T12:28:49.713+07:00  INFO 86088 --- [anki-api] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 187 ms
+2025-12-09T12:28:49.742+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-09T12:28:49.743+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-09T12:28:49.746+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-09T12:28:49.746+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-12-09T12:28:49.773+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@5eceaac3
+2025-12-09T12:28:49.773+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-12-09T12:28:49.777+07:00  WARN 86088 --- [anki-api] [  restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-09T12:28:49.779+07:00  INFO 86088 --- [anki-api] [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 15.15
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-09T12:28:49.815+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-09T12:28:49.859+07:00  INFO 86088 --- [anki-api] [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-09T12:28:49.959+07:00  INFO 86088 --- [anki-api] [  restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-12-09T12:28:49.959+07:00  WARN 86088 --- [anki-api] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-12-09T12:28:49.989+07:00  WARN 86088 --- [anki-api] [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-09T12:28:50.181+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-12-09T12:28:50.187+07:00  INFO 86088 --- [anki-api] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-12-09T12:28:50.189+07:00  INFO 86088 --- [anki-api] [  restartedMain] com.anki.anki_api.AnkiApiApplication     : Started AnkiApiApplication in 0.675 seconds (process running for 398.733)
+Hibernate: 
+    select
+        count(*) 
+    from
+        users u1_0
+2025-12-09T12:28:50.195+07:00  INFO 86088 --- [anki-api] [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-09T12:28:58.616+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-09T12:28:58.616+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-09T12:28:58.617+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-09T12:28:58.618+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Processing request to: /api/auth/signin
+2025-12-09T12:28:58.618+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT parsed: NULL
+2025-12-09T12:28:58.618+07:00  WARN 86088 --- [anki-api] [nio-8080-exec-1] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT is null or invalid
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-12-09T12:29:00.948+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-2] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Processing request to: /api/cards/assigned
+2025-12-09T12:29:00.949+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-2] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT parsed: Present (length: 148)
+2025-12-09T12:29:00.949+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-2] com.anki.anki_api.security.JwtUtils      : === JwtUtils: Validating JWT token
+2025-12-09T12:29:00.950+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-2] com.anki.anki_api.security.JwtUtils      : === JwtUtils: JWT token is valid
+2025-12-09T12:29:00.950+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-2] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: JWT is valid
+2025-12-09T12:29:00.950+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-2] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Username from JWT: student_1765252880
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+2025-12-09T12:29:00.954+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-2] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: UserDetails loaded: student_1765252880, Authorities: [ROLE_STUDENT]
+2025-12-09T12:29:00.954+07:00  INFO 86088 --- [anki-api] [nio-8080-exec-2] c.a.anki_api.security.AuthTokenFilter    : === AuthTokenFilter: Authentication set in SecurityContext
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.email,
+        u1_0.full_name,
+        u1_0.password,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+USERRR: User(id=15, username=student_1765252880, password=$2a$10$BBWw2.kQFVIn1HENiUBYU.rUAVcrRnUlTJbhPtmPdSGNEHn1ZII/2, email=student_1765252880@test.com, fullName=Student Test, role=ROLE_STUDENT)
+Hibernate: 
+    select
+        ca1_0.id,
+        ca1_0.assigned_at,
+        ca1_0.card_id,
+        ca1_0.student_id 
+    from
+        card_assignments ca1_0 
+    where
+        ca1_0.student_id=?
+Hibernate: 
+    select
+        ac1_0.id,
+        ac1_0.definition,
+        ac1_0.difficulty,
+        ac1_0.pronunciation,
+        ac1_0.word 
+    from
+        anki_cards ac1_0 
+    where
+        ac1_0.id=?
