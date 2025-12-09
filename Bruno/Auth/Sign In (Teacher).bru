@@ -1,0 +1,27 @@
+meta {
+  name: Sign In (Teacher)
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/api/auth/signin
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "username": "teacher1",
+      "password": "123456"
+  }
+}
+
+script:post-response {
+  var jsonData = res.getBody();
+  bru.setVar("teacher_token", jsonData.token);
+}
+
+settings {
+  encodeUrl: true
+}

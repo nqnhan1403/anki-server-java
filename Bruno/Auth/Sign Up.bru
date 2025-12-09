@@ -1,0 +1,25 @@
+meta {
+  name: Sign Up
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/api/auth/signup
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "username": "newuser",
+      "email": "newuser@anki.com",
+      "password": "123456",
+      "fullName": "New User",
+      "role": "ROLE_STUDENT"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

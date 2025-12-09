@@ -1,0 +1,26 @@
+meta {
+  name: Record History
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/api/history
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{student_token}}
+}
+
+body:json {
+  {
+      "cardId": 1,
+      "rating": "HARD"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

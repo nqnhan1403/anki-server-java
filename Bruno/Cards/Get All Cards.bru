@@ -1,0 +1,19 @@
+meta {
+  name: Get All Cards
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/api/cards
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{student_token}}
+}
+
+settings {
+  encodeUrl: true
+}

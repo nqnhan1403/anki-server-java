@@ -1,0 +1,28 @@
+meta {
+  name: Create Card (Teacher Only)
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/api/cards
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{teacher_token}}
+}
+
+body:json {
+  {
+      "word": "NewWord",
+      "pronunciation": "/njuːwɜːd/",
+      "definition": "A newly created word for testing",
+      "difficulty": "EASY"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
