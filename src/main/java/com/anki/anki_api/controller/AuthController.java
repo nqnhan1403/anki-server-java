@@ -17,13 +17,13 @@ public class AuthController {
     UserService userService;
 
     @PostMapping("/signin")
-    public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+    public ResponseEntity<JwtResponse> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
         JwtResponse response = userService.authenticateUser(loginRequest);
         return ResponseEntity.ok(response);
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+    public ResponseEntity<String> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
         try {
             userService.registerUser(signUpRequest);
             return ResponseEntity.ok("User registered successfully!");

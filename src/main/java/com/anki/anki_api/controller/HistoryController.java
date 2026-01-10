@@ -20,7 +20,7 @@ public class HistoryController {
     HistoryService historyService;
 
     @PostMapping
-    public ResponseEntity<?> recordHistory(@Valid @RequestBody HistoryRequest request) {
+    public ResponseEntity<LearningHistory> recordHistory(@Valid @RequestBody HistoryRequest request) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentPrincipalName = authentication.getName();
         
@@ -29,7 +29,7 @@ public class HistoryController {
     }
 
     @GetMapping("/stats")
-    public ResponseEntity<?> getStats() {
+    public ResponseEntity<Map<String, Object>> getStats() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentPrincipalName = authentication.getName();
 

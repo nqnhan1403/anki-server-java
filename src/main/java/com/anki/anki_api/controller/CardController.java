@@ -45,7 +45,6 @@ public class CardController {
         String username = authentication.getName();
         com.anki.anki_api.entity.User user = userRepository.findByUsername(username)
         .orElseThrow(() -> new RuntimeException("User not found"));
-        System.out.println("USERRR: " + user);
         return cardService.getAssignedCards(user.getId());
     }
 }
