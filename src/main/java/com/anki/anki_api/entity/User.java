@@ -7,10 +7,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import java.util.Objects;
+// import java.util.Objects;
 
 @Entity
 @Table(name = "users")
+@org.hibernate.annotations.SQLDelete(sql = "UPDATE users SET is_deleted = true WHERE id=?")
+@org.hibernate.annotations.Where(clause = "is_deleted=false")
 @Data
 @Builder
 @NoArgsConstructor
@@ -20,6 +22,10 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Builder.Default
+    @Column(name = "is_deleted")
+    private boolean isDeleted = false;
 
     @NotBlank
     @Column(unique = true)

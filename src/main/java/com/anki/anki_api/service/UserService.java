@@ -37,7 +37,6 @@ public class UserService {
                 new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        String jwt = jwtUtils.generateJwtToken(authentication);
 
         org.springframework.security.core.userdetails.User userDetails = (org.springframework.security.core.userdetails.User) authentication.getPrincipal();
         List<String> roles = userDetails.getAuthorities().stream()
@@ -47,12 +46,10 @@ public class UserService {
         User user = userRepository.findByUsername(userDetails.getUsername()).orElseThrow();
 
         return JwtResponse.builder()
-                .token(jwt)
                 .id(user.getId())
                 .username(user.getUsername())
                 .email(user.getEmail())
                 .roles(roles)
-                .type("Bearer")
                 .build();
     }
 

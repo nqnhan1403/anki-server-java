@@ -32,10 +32,27 @@ public class CardAssignment {
 
     @Builder.Default
     private LocalDateTime assignedAt = LocalDateTime.now();
+
+    // Spaced Repetition System (SRS) Fields (SM-2)
+    @Builder.Default
+    private LocalDateTime nextReviewDate = LocalDateTime.now();
+
+    @Builder.Default
+    private Integer reviewInterval = 0; // in days
+
+    @Builder.Default
+    private Float easeFactor = 2.5f;
+
+    @Builder.Default
+    private Integer repetitions = 0;
     
     public CardAssignment(User student, AnkiCard card) {
         this.student = student;
         this.card = card;
         this.assignedAt = LocalDateTime.now();
+        this.nextReviewDate = LocalDateTime.now();
+        this.reviewInterval = 0;
+        this.easeFactor = 2.5f;
+        this.repetitions = 0;
     }
 }

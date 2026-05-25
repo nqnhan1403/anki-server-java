@@ -35,6 +35,36 @@ public class JwtUtils {
                 .compact();
     }
 
+    @Value("${jwt.cookie.name:anki_token}")
+    private String jwtCookie;
+
+    public org.springframework.http.ResponseCookie generateJwtCookie(Authentication authentication) {
+        String jwt = generateJwtToken(authentication);
+        return org.springframework.http.ResponseCookie.from(jwtCookie, jwt)
+                .path("/api")
+                .maxAge(24 * 60 * 60)
+                .httpOnly(true)
+                .secure(false) // Set to true if using HTTPS
+                .build();
+    }
+
+    public org.springframework.http.ResponseCookie getCleanJwtCookie() {
+        return org.springframework.http.ResponseCookie.from(jwtCookie, "")
+                .path("/api")
+                .maxAge(0)
+                .httpOnly(true)
+                .build();
+    }
+
+    public String getJwtFromCookies(jakarta.servlet.http.HttpServletRequest request) {
+        jakarta.servlet.http.Cookie cookie = org.springframework.web.util.WebUtils.getCookie(request, jwtCookie);
+        if (cookie != null) {
+            return cookie.getValue();
+        } else {
+            return null;
+        }
+    }
+
     private javax.crypto.SecretKey key() {
         return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
     }

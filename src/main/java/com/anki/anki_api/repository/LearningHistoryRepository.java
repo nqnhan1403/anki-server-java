@@ -18,4 +18,6 @@ public interface LearningHistoryRepository extends JpaRepository<LearningHistory
 
     // Find the latest history entry for a student with a specific rating
     Optional<LearningHistory> findTopByStudentIdAndRatingOrderByReviewDateDesc(Long studentId, Difficulty rating);
+    
+    java.util.List<LearningHistory> findByStudentId(Long studentId);
 }

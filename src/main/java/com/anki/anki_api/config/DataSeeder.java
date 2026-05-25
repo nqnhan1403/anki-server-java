@@ -33,8 +33,8 @@ public class DataSeeder implements CommandLineRunner {
     @Override
     @Transactional
     public void run(String... args) throws Exception {
-        // Only seed if no users exist
-        if (userRepository.count() > 0) {
+        // Only seed if DB is truly empty. Using native count to bypass soft-delete filter (@Where).
+        if (userRepository.countAllRows() > 0) {
             return;
         }
 
@@ -114,6 +114,7 @@ public class DataSeeder implements CommandLineRunner {
         for (String[] data : wordData) {
             cards.add(AnkiCard.builder()
                     .word(data[0])
+                    .wordType(WordType.NOUN)
                     .pronunciation(data[1])
                     .definition(data[2])
                     .difficulty(Difficulty.valueOf(data[3]))

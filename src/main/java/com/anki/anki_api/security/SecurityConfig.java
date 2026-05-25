@@ -53,24 +53,14 @@ public class SecurityConfig {
     
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf(csrf -> csrf.disable())
+        http.cors(cors -> cors.configurationSource(corsConfigurationSource()))
+            .csrf(csrf -> csrf.disable())
             .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> 
                 auth.requestMatchers("/api/auth/**").permitAll()
                     .requestMatchers("/api/cards/**").authenticated()
-                    // User said: "Anki Card will content word...". "User has 2 kind of user, Teacher and Student".
-                    // I'll assume only Teachers can CREATE/UPDATE cards. Students might verify them. 
-                    // But usually Anki is personal. A "server about manage anki card" might mean a central repo?
-                    // "show a new word for student try to rememeber" -> implies a feed of cards.
-                    // For now, I'll allow Authenticated Generic Access to GET, but POST/PUT to Teacher maybe?
-                    // Let's refine:
-                    // /api/cards GET -> Authenticated
-                    // /api/cards POST -> Teacher
-                    // /api/history/** -> Authenticated.
-                    .requestMatchers("/api/cards").authenticated() // Viewing cards allowed for all authenticated
-                     // Special handling for POST probably in Controller or here?
-                     // Let's keep it simple: Authenticated. logic in controller if role check needed or use @PreAuthorize.
+                    .requestMatchers("/api/cards").authenticated()
                     .anyRequest().authenticated()
             );
         
@@ -79,5 +69,22 @@ public class SecurityConfig {
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
         
         return http.build();
+    }
+
+    @Bean
+    public org.springframework.web.cors.CorsConfigurationSource corsConfigurationSource() {
+        org.springframework.web.cors.CorsConfiguration configuration = new org.springframework.web.cors.CorsConfiguration();
+        // When allowCredentials=true, wildcard origins are blocked by browsers.
+        // Explicitly whitelist local dev frontends.
+        configuration.setAllowedOrigins(java.util.Arrays.asList(
+                "http://localhost:3000",
+                "http://127.0.0.1:3000"
+        ));
+        configuration.setAllowedMethods(java.util.Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.setAllowedHeaders(java.util.Arrays.asList("*"));
+        configuration.setAllowCredentials(true);
+        org.springframework.web.cors.UrlBasedCorsConfigurationSource source = new org.springframework.web.cors.UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
     }
 }

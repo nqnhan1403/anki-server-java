@@ -26,6 +26,9 @@ public class HistoryService {
     @Autowired
     AnkiCardRepository cardRepository;
 
+    @Autowired
+    com.anki.anki_api.repository.CardAssignmentRepository cardAssignmentRepository;
+
     @Transactional
     public LearningHistory recordHistory(HistoryRequest request, String username) {
         User student = userRepository.findByUsername(username)
@@ -33,6 +36,38 @@ public class HistoryService {
 
         AnkiCard card = cardRepository.findById(request.getCardId())
                 .orElseThrow(() -> new RuntimeException("Card not found with id: " + request.getCardId()));
+
+        com.anki.anki_api.entity.CardAssignment assignment = cardAssignmentRepository
+                .findByStudentIdAndCardId(student.getId(), card.getId())
+                .orElseThrow(() -> new RuntimeException("Card not assigned to student"));
+
+        // SM-2 Logic
+        int grade = 0;
+        switch(request.getRating()) {
+            case HARD: grade = 1; break;
+            case MEDIUM: grade = 3; break;
+            case EASY: grade = 5; break;
+        }
+
+        if (grade < 3) {
+            assignment.setRepetitions(0);
+            assignment.setReviewInterval(1);
+        } else {
+            assignment.setRepetitions(assignment.getRepetitions() + 1);
+            if (assignment.getRepetitions() == 1) {
+                assignment.setReviewInterval(1);
+            } else if (assignment.getRepetitions() == 2) {
+                assignment.setReviewInterval(6);
+            } else {
+                assignment.setReviewInterval(Math.round(assignment.getReviewInterval() * assignment.getEaseFactor()));
+            }
+        }
+        
+        float newEase = assignment.getEaseFactor() + (0.1f - (5 - grade) * (0.08f + (5 - grade) * 0.02f));
+        assignment.setEaseFactor(Math.max(1.3f, newEase));
+        assignment.setNextReviewDate(java.time.LocalDateTime.now().plusDays(assignment.getReviewInterval()));
+        
+        cardAssignmentRepository.save(assignment);
 
         LearningHistory history = LearningHistory.builder()
                 .student(student)

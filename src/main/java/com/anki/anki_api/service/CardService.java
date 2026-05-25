@@ -19,8 +19,8 @@ public class CardService {
     @Autowired
     com.anki.anki_api.repository.UserRepository userRepository;
 
-    public List<AnkiCard> getAllCards() {
-        return ankiCardRepository.findAll();
+    public org.springframework.data.domain.Page<AnkiCard> getAllCards(org.springframework.data.domain.Pageable pageable) {
+        return ankiCardRepository.findAll(pageable);
     }
 
     public AnkiCard createCard(AnkiCard card) {
@@ -41,9 +41,19 @@ public class CardService {
         cardAssignmentRepository.save(assignment);
     }
 
-    public List<AnkiCard> getAssignedCards(Long studentId) {
-        return cardAssignmentRepository.findByStudentId(studentId).stream()
-                .map(com.anki.anki_api.entity.CardAssignment::getCard)
-                .collect(java.util.stream.Collectors.toList());
+    public org.springframework.data.domain.Page<AnkiCard> getAssignedCards(Long studentId, org.springframework.data.domain.Pageable pageable) {
+        org.springframework.data.domain.Page<com.anki.anki_api.entity.CardAssignment> page = cardAssignmentRepository.findByStudentId(studentId, pageable);
+        return page.map(com.anki.anki_api.entity.CardAssignment::getCard);
+    }
+
+    public org.springframework.data.domain.Page<AnkiCard> getDueCards(Long studentId, org.springframework.data.domain.Pageable pageable) {
+        org.springframework.data.domain.Page<com.anki.anki_api.entity.CardAssignment> page = cardAssignmentRepository
+                .findByStudentIdAndNextReviewDateBefore(studentId, java.time.LocalDateTime.now(), pageable);
+        return page.map(com.anki.anki_api.entity.CardAssignment::getCard);
+    }
+
+    public void deleteCard(Long id) {
+        cardAssignmentRepository.deleteByCardId(id);
+        ankiCardRepository.deleteById(id);
     }
 }

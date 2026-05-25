@@ -1,18 +1,17 @@
 package com.anki.anki_api.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-import java.util.List;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class JwtResponse {
+public class UserDTO {
     private Long id;
     private String username;
-    private String email;
-    private List<String> roles;
+    private String fullName;
 }
+

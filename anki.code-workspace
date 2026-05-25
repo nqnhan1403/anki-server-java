@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "anki-server-java",
+			"path": "."
+		},
+		{
+			"name": "learn-with-anki",
+			"path": "../learn-with-anki"
+		}
+	],
+	"settings": {}
+}
